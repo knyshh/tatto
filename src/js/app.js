@@ -15,20 +15,15 @@ $(document).ready(function(){
 
 
   const $modal = $('.popup-wrapper');
+  const $menu = $('.navigation-wrapper');
 
-  // $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
-  //   // if($modal.hasClass('state-leave')) {
-  //   //   $modal.removeClass('state-leave');
-  //   // }
-  // });
 
   $('.popup__close').on('click', function(){
     $modal.addClass('out');
     $modal.removeClass('active');
     $('body').removeClass('modal-active');
   });
-  //
-  //
+
   $('.js-order').on('click', function(){
     $modal.removeClass('out');
     $modal.addClass('active');
@@ -89,16 +84,13 @@ $(document).ready(function(){
   });
 
 
+  // show-hide menu
   $('.menu-trigger').on('click', function(){
-
-    $('.overlay').addClass('active').removeClass('out');
-
+    $menu.addClass('active').removeClass('out');
   });
 
   $('.close-btn').on('click', function(){
-
-    $('.overlay').removeClass('active').addClass('out');
-
+    $menu.removeClass('active').addClass('out');
   });
 
 

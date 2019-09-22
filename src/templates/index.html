@@ -48,9 +48,7 @@
           </div>
         </div>
         <div class="col-xs-12  col-md-12 col-lg-6 col-xl-6">
-          <div class="main-slide__img">
-            <!--<img src="img/main-slide.png" alt="">-->
-          </div>
+          <div class="main-slide__img"></div>
         </div>
       </div>
     </div>
@@ -220,7 +218,7 @@
         </div>
       </div>
 
-      <button class="button button--primary">записaться  на процедуру</button>
+      <button class="js-order button button--primary">записaться  на процедуру</button>
 
     </div>
 
@@ -324,7 +322,7 @@
         на ежедневный макияж?
       </h4>
 
-      <button class="button button--secondary">Записаться на процедуру</button>
+      <button class="js-order button button--secondary">Записаться на процедуру</button>
 
     </div>
   </section>
@@ -388,39 +386,37 @@
   <!-- navigation -->
 
   <section class="navigation-wrapper overlay">
-  <div class="navigation-container">
+    <div class="navigation-container">
 
-    <i class="close-btn"></i>
-    <nav class="navigation">
-      <h4 data-nav class="navigation__title">Меню</h4>
-      <ul class="navigation__list">
-        <li data-nav class="navigation__item"><a class="navigation__href">Про мастера</a></li>
-        <li data-nav class="navigation__item"><a class="navigation__href">Услуги</a></li>
-        <li data-nav class="navigation__item"><a class="navigation__href">Фото работ</a></li>
-        <li data-nav class="navigation__item"><a class="navigation__href">Материалы и инструменты</a></li>
-        <li data-nav class="navigation__item"><a class="navigation__href">Контакты</a></li>
+      <i class="close-btn"></i>
+      <nav class="navigation">
+        <h4 data-nav class="navigation__title">Меню</h4>
+        <ul class="navigation__list">
+          <li data-nav class="navigation__item"><a class="navigation__href">Про мастера</a></li>
+          <li data-nav class="navigation__item"><a class="navigation__href">Услуги</a></li>
+          <li data-nav class="navigation__item"><a class="navigation__href">Фото работ</a></li>
+          <li data-nav class="navigation__item"><a class="navigation__href">Материалы и инструменты</a></li>
+          <li data-nav class="navigation__item"><a class="navigation__href">Контакты</a></li>
+        </ul>
+      </nav>
+
+
+      <button  class="js-order button button--border">запись</button>
+
+      <ul class="social social--aside ">
+        <li class="social__list">
+          <a class="social__href"><i class="social__icon">
+            <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6.1875H5.625V3.9375C5.625 3.31664 6.12914 2.8125 6.75 2.8125H7.875V0H5.625C3.76102 0 2.25 1.51102 2.25 3.375V6.1875H0V9H2.25V18H5.625V9H7.875L9 6.1875Z" fill="#0B050C"/>
+          </svg></i></a>
+          <a class="social__href"><i class="social__icon instagram">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.25 0H3.75C1.68 0 0 1.68 0 3.75V12.25C0 14.32 1.68 16 3.75 16H12.25C14.32 16 16 14.32 16 12.25V3.75C16 1.68 14.32 0 12.25 0ZM8 11.5C6.0675 11.5 4.5 9.9325 4.5 8C4.5 6.0675 6.0675 4.5 8 4.5C9.9325 4.5 11.5 6.0675 11.5 8C11.5 9.9325 9.9325 11.5 8 11.5ZM12.375 4.75C11.7525 4.75 11.25 4.2475 11.25 3.625C11.25 3.0025 11.7525 2.5 12.375 2.5C12.9975 2.5 13.5 3.0025 13.5 3.625C13.5 4.2475 12.9975 4.75 12.375 4.75Z" fill="black"/>
+          </svg></i></a>
+        </li>
       </ul>
-    </nav>
 
-
-
-    <button  class="js-order button button--border">запись</button>
-
-    <ul class="social social--aside ">
-      <li class="social__list">
-        <a class="social__href"><i class="social__icon">
-          <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 6.1875H5.625V3.9375C5.625 3.31664 6.12914 2.8125 6.75 2.8125H7.875V0H5.625C3.76102 0 2.25 1.51102 2.25 3.375V6.1875H0V9H2.25V18H5.625V9H7.875L9 6.1875Z" fill="#0B050C"/>
-        </svg></i></a>
-        <a class="social__href"><i class="social__icon instagram">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.25 0H3.75C1.68 0 0 1.68 0 3.75V12.25C0 14.32 1.68 16 3.75 16H12.25C14.32 16 16 14.32 16 12.25V3.75C16 1.68 14.32 0 12.25 0ZM8 11.5C6.0675 11.5 4.5 9.9325 4.5 8C4.5 6.0675 6.0675 4.5 8 4.5C9.9325 4.5 11.5 6.0675 11.5 8C11.5 9.9325 9.9325 11.5 8 11.5ZM12.375 4.75C11.7525 4.75 11.25 4.2475 11.25 3.625C11.25 3.0025 11.7525 2.5 12.375 2.5C12.9975 2.5 13.5 3.0025 13.5 3.625C13.5 4.2475 12.9975 4.75 12.375 4.75Z" fill="black"/>
-        </svg></i></a>
-      </li>
-    </ul>
-
-
-  </div>
+    </div>
   </section>
 
   <!--//popup-->
@@ -477,12 +473,6 @@
         </div>
 
 
-        <!--<div class="show-success">-->
-        <!--<p> Thank you !</p>-->
-        <!--</div>-->
-        <!--<div class="show-fail">-->
-        <!--<p> oops ! server error . try again . </p>-->
-        <!--</div>-->
       </form>
 
       <div class="show-success">
