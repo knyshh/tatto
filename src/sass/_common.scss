@@ -148,15 +148,33 @@ h1 {
 .header {
     position: absolute;
     width: 100%;
-    height: 126px;
+    height: 130px;
     background: #fff;
     border-bottom: 1px solid $brown;
+    padding-top: 31px;
+    z-index: 3;
+
+    &__right {
+        padding-left: 93px;
+    }
+    &__logo {
+        margin-left: 70px;
+    }
     &--main {
         padding-top: 50px;
         background: transparent;
         border-bottom: none;
         z-index: 3;
+        padding-left: 0;
+
+        .menu-trigger {
+            margin-right: 8.33333%;
+            margin-top: 22px;
+
+        }
+
     }
+
 }
 .desktop,
 .tablet {
@@ -229,13 +247,9 @@ h1 {
     }
 }
 .menu-trigger {
-    //position: absolute;
-    //right: 100px;
-    //top: 72px;
-
+    display: inline-block;
     width: 24px;
     height: 16px;
-    margin-right: 8.33333%;
     margin-left: 70px;
     cursor: pointer;
     margin-top: 22px;
@@ -1019,6 +1033,86 @@ h1 {
 }
 .hide-msg {
     //display: none;
+}
+
+.about {
+    background: $brown;
+    color: #fff;
+    padding-top: 130px;
+
+    &__title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        position: relative;
+        padding-bottom: 135px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            left: 0;
+            top: 80px;
+            background: #fff;
+        }
+    }
+    &__txtblock {
+        padding-left: 9%;
+        padding-top: 100px;
+        padding-right: 70px;
+    }
+    &__p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+    }
+    &__list {
+        padding: 20px 0 20px 15px;
+
+    }
+    &__list-item {
+        margin-bottom: 15px;
+        font-size: 18px;
+
+        &:before {
+            content: '';
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #fff;
+
+        }
+
+    }
+
+}
+.sertificates {
+    padding-top: 100px;
+    background: $light-grey;
+    padding-bottom: 125px;
+
+    &__list {
+        margin-top: 50px;
+
+    }
+    &__list-item {
+        margin-left: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+}
+
+.sertificates__list {
+
 }
 
 
