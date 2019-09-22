@@ -1,0 +1,53 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  "plugins": [
+    "dollar-sign"
+  ],
+  "extends": ["airbnb-base", "prettier"],
+  "rules": {
+    "dollar-sign/dollar-sign": [2, "ignoreProperties"],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-unused-vars": 1,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  },
+  "globals": {
+    //GSAP Globals
+    "TimelineLite" : false,
+    "TimelineMax" : false,
+    "TweenLite" : false,
+    "TweenMax" : false,
+    "Back" : false,
+    "Bounce" : false,
+    "Circ" : false,
+    "Cubic" : false,
+    "Ease" : false,
+    "EaseLookup" : false,
+    "Elastic" : false,
+    "Expo" : false,
+    "Linear" : false,
+    "Power0" : false,
+    "Power1" : false,
+    "Power2" : false,
+    "Power3" : false,
+    "Power4" : false,
+    "Quad" : false,
+    "Quart" : false,
+    "Quint" : false,
+    "RoughEase" : false,
+    "Sine" : false,
+    "SlowMo" : false,
+    "SteppedEase" : false,
+    "Strong" : false,
+    "Draggable" : false,
+    "SplitText" : false,
+    "VelocityTracker" : false,
+    "CSSPlugin" : false,
+    "ThrowPropsPlugin" : false,
+    "BezierPlugin" : false
+  }
+}
