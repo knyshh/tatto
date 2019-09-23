@@ -2,7 +2,7 @@
 <html class="mainbody">
 <head>
   <meta charset="utf-8" />
-  <title>Index page</title>
+  <title>About</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#fff" />
@@ -14,74 +14,66 @@
 <!-- BEGIN content -->
 <div class="container-app">
 
-  <header class="header header--main">
-    <div class="container d-flex justify-content-end">
-      <button class="js-order button button--inverse">запись</button>
+  <header class="header">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-8 col-sm-8 col-md-4 col-lg-4 col-xl-8">
+          <a href="#" class="header__logo">
+            <img src="img/logo-page.svg" alt="">
+          </a>
+        </div>
+        <div class="header__right col-4 col-sm-4 col-md-8 col-lg-8 col-xl-4">
+          <button class="js-order button button--border">запись</button>
 
-      <div class="menu-trigger">
-        <svg width="24" height="16" class="trigger" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="14" width="24" height="2" rx="1" fill="white"/>
-          <rect y="7" width="24" height="2" rx="1" fill="white"/>
-          <rect width="24" height="2" rx="1" fill="white"/>
-        </svg>
+          <div class="menu-trigger ">
+            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="14" width="24" height="2" rx="1" fill="black"/>
+              <rect y="7" width="24" height="2" rx="1" fill="black"/>
+              <rect width="24" height="2" rx="1" fill="black"/>
+            </svg>
+
+          </div>
+
+        </div>
       </div>
-
     </div>
-
   </header>
 
-  <section class="main-slide">
+  <div class="container page">
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 col-lg-6 col-xl-6">
-          <div class="d-flex height100vh align-items-center justify-content-center">
-            <a href="#" class="main-logo">
-              <img src="img/logo.svg" alt="">
-            </a>
-          </div>
-        </div>
-        <div class="col-xs-12  col-md-12 col-lg-6 col-xl-6">
-          <div class="main-slide__img"></div>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12  col-lg-11 offset-lg-1 col-xl-11 offset-xl-1">
+        <h2 class="page__title">Услуги</h2>
       </div>
     </div>
-  </section>
 
-  <section class="intro">
+    <div class="row page__content align-content-center">
+      <div class="page__txtblock col-sm-12 col-md-12 col-lg-5  offset-lg-1 col-xl-5  offset-xl-1">
+        <p class="page__txt">
+          Перманентний макияж – это альтернатива дневному мейкапу.
+          Он превосходно заменяет косметику для повседневного макияжа
+          и в то же время может быть основой для создания вечернего образа.</p>
+        <p class="page__txt"> Качественно выполненная процедура перманентного макияжа
+          способна существенно преобразить лицо.</p>
+        <p class="page__txt"> Главный ориентир этой процедуры направлен в
+          сторону максимальной естественности внешнего вида.
+        </p>
 
-    <div class="container">
-      <div  class="row align-items-center">
-        <div class="col-xs-12 col-sm-12 col-md-6 align-items-center justify-content-center">
-          <div class="intro__imgblock">
-            <img class="intro__photo" src="img/intro.png" alt="">
-          </div>
-
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-6">
-
-          <div class="intro__txt">
-            <p class="intro__slogan">Мы были одними из первых и остаемся одними из лучших.</p>
-
-            <p class="intro__author">Андрей Токарь,</p>
-            <p class="intro_description">Эксперт перманентного макияжа, </br>
-              Опыт работы более 20 лет</p>
-
-          </div>
-
-        </div>
       </div>
 
+      <div class="col-sm-12 col-md-12 col-lg-5 offset-lg-1 col-xl-5  offset-xl-1">
 
+        <div class="page__img">
+          <img src="img/material.png" alt="">
+        </div>
+
+      </div>
     </div>
-
-
-  </section>
+  </div>
 
   <section class="services">
 
-    <h2 class="title">Услуги</h2>
+    <h2 class="title">процедуры</h2>
 
     <div class="container ">
 
@@ -218,109 +210,6 @@
 
   </section>
 
-  <section class="portfolio">
-
-    <h2 class="title">фото работ</h2>
-
-    <div class="container justify-content-center">
-
-      <div class="portfolio__list col-lg-10 offset-lg-1 col-xl-10 offset-xl-1">
-        <img class="portfolio__img" src="img/portfolio1.jpg" alt="">
-        <img class="portfolio__img" src="img/portfolio2.jpg" alt="">
-        <img class="portfolio__img" src="img/portfolio3.png" alt="">
-        <img class="portfolio__img" src="img/portfolio4.jpg" alt="">
-        <img class="portfolio__img" src="img/portfolio5.jpg" alt="">
-        <img class="portfolio__img" src="img/portfolio6.jpg" alt="">
-        <img class="portfolio__img" src="img/portfolio7.jpg" alt="">
-        <img class="portfolio__img" src="img/portfolio8.jpg" alt="">
-      </div>
-    </div>
-
-  </section>
-
-
-  <section class="review">
-    <h2 class="title">Отзывы клиентов</h2>
-    <div class="container">
-      <div class="review__list">
-        <div class="review__item">
-
-          <figure class="review__author">
-            <img class="review__img" src="img/portfolio1.jpg" alt="">
-            <figcaption class="review__name">
-              Мария
-            </figcaption>
-          </figure>
-
-          <div class="review__txt">
-            “Красивый цвет, ровный контур, все выполнено профессионально и выглядит натурально!”
-          </div>
-        </div>
-        <div class="review__item">
-
-          <figure class="review__author">
-            <img class="review__img" src="img/portfolio1.jpg" alt="">
-            <figcaption class="review__name">
-              Мария
-            </figcaption>
-          </figure>
-
-          <div class="review__txt">
-            “Красивый цвет, ровный контур, все выполнено профессионально и выглядит натурально!”
-          </div>
-        </div>
-        <div class="review__item">
-
-          <figure class="review__author">
-            <img class="review__img" src="img/portfolio1.jpg" alt="">
-            <figcaption class="review__name">
-              Мария
-            </figcaption>
-          </figure>
-
-          <div class="review__txt">
-            “Красивый цвет, ровный контур, все выполнено профессионально и выглядит натурально!”
-          </div>
-        </div>
-        <div class="review__item">
-
-          <figure class="review__author">
-            <img class="review__img" src="img/portfolio1.jpg" alt="">
-            <figcaption class="review__name">
-              Мария
-            </figcaption>
-          </figure>
-
-          <div class="review__txt">
-            “Красивый цвет, ровный контур, все выполнено профессионально и выглядит натурально!”
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="promo">
-    <div class="promo__container">
-      <div class="promo__logo">
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.5">
-            <path d="M35 0C15.6722 0 0 15.6722 0 35C0 54.3278 15.6722 70 35 70C54.3278 70 70 54.3278 70 35C70 15.6722 54.3278 0 35 0ZM32.7056 51.2037H31.4093V23.3333H16.5019V22.037H32.7056V51.2037ZM46.3685 33.7037C42.7907 33.7037 39.887 30.8 39.887 27.2222C39.887 23.6444 42.7907 20.7407 46.3685 20.7407C49.9463 20.7407 52.85 23.6444 52.85 27.2222C52.85 30.8 49.9463 33.7037 46.3685 33.7037Z" fill="white"/>
-            <path d="M46.3685 32.4075C49.2322 32.4075 51.5537 30.086 51.5537 27.2223C51.5537 24.3586 49.2322 22.0371 46.3685 22.0371C43.5048 22.0371 41.1833 24.3586 41.1833 27.2223C41.1833 30.086 43.5048 32.4075 46.3685 32.4075Z" fill="white"/>
-          </g>
-        </svg>
-      </div>
-
-      <h4 class="promo__title">
-        Готовы стать ярче и не тратить время
-        на ежедневный макияж?
-      </h4>
-
-      <button class="js-order button button--secondary">Записаться на процедуру</button>
-
-    </div>
-  </section>
-
 
   <footer class="footer">
 
@@ -352,20 +241,20 @@
             <li class="social__item">
               <a class="social__href">
                 <i class="social__icon">
-                  <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 6.1875H5.625V3.9375C5.625 3.31664 6.12914 2.8125 6.75 2.8125H7.875V0H5.625C3.76102 0 2.25 1.51102 2.25 3.375V6.1875H0V9H2.25V18H5.625V9H7.875L9 6.1875Z" fill="#0B050C"/>
-                  </svg>
+                <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6.1875H5.625V3.9375C5.625 3.31664 6.12914 2.8125 6.75 2.8125H7.875V0H5.625C3.76102 0 2.25 1.51102 2.25 3.375V6.1875H0V9H2.25V18H5.625V9H7.875L9 6.1875Z" fill="#0B050C"/>
+                </svg>
 
-                </i></a>
+              </i></a>
             </li>
             <li class="social__item">
               <a class="social__href">
                 <i class="social__icon instagram">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.25 0H3.75C1.68 0 0 1.68 0 3.75V12.25C0 14.32 1.68 16 3.75 16H12.25C14.32 16 16 14.32 16 12.25V3.75C16 1.68 14.32 0 12.25 0ZM8 11.5C6.0675 11.5 4.5 9.9325 4.5 8C4.5 6.0675 6.0675 4.5 8 4.5C9.9325 4.5 11.5 6.0675 11.5 8C11.5 9.9325 9.9325 11.5 8 11.5ZM12.375 4.75C11.7525 4.75 11.25 4.2475 11.25 3.625C11.25 3.0025 11.7525 2.5 12.375 2.5C12.9975 2.5 13.5 3.0025 13.5 3.625C13.5 4.2475 12.9975 4.75 12.375 4.75Z" fill="black"/>
-                  </svg>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.25 0H3.75C1.68 0 0 1.68 0 3.75V12.25C0 14.32 1.68 16 3.75 16H12.25C14.32 16 16 14.32 16 12.25V3.75C16 1.68 14.32 0 12.25 0ZM8 11.5C6.0675 11.5 4.5 9.9325 4.5 8C4.5 6.0675 6.0675 4.5 8 4.5C9.9325 4.5 11.5 6.0675 11.5 8C11.5 9.9325 9.9325 11.5 8 11.5ZM12.375 4.75C11.7525 4.75 11.25 4.2475 11.25 3.625C11.25 3.0025 11.7525 2.5 12.375 2.5C12.9975 2.5 13.5 3.0025 13.5 3.625C13.5 4.2475 12.9975 4.75 12.375 4.75Z" fill="black"/>
+                </svg>
 
-                </i></a>
+              </i></a>
             </li>
           </ul>
 

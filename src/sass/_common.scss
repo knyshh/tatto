@@ -30,6 +30,17 @@ address {
     padding: 0;
 }
 
+.container {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1180px;
@@ -156,9 +167,18 @@ h1 {
 
     &__right {
         padding-left: 93px;
+
+        @media (max-width: 1200px) {
+            padding-left: 10px;
+            text-align: right;
+        }
     }
     &__logo {
-        margin-left: 70px;
+
+        @media (max-width: 992px) {
+            //margin-left: 10px;
+        }
+
     }
     &--main {
         padding-top: 50px;
@@ -176,23 +196,26 @@ h1 {
     }
 
 }
-.desktop,
-.tablet {
-    .mobile-trigger {
+
+@media  (max-width: 1023px) {
+    .trigger rect  {
+        fill: black;
+    }
+}
+
+@media  (min-width: 1024px) {
+    .trigger  rect{
+        fill: white;
+    }
+}
+
+@media  (max-width: 768px) {
+    .button--inverse {
         display: none;
     }
-    .desktop-trigger {
-        display: block;
-    }
 }
-.mobile {
-    .mobile-trigger {
-        display: block;
-    }
-    .desktop-trigger {
-        display: none
-    }
-}
+
+
 
 .button {
     height: 60px;
@@ -405,27 +428,43 @@ h1 {
     &__container {
         width: 400px;
         margin:  0 auto;
-        @media (max-width: 768px) {
+
+        @media (max-width: 767px) {
             width: 100%;
         }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            width: 500px;
+            margin: 0 auto;
+        }
+
     }
 
     //opacity: 0;
     position: fixed;
-    width: 700px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
+
 
     padding: 60px 0 85px 0;
-    max-width: 700px;
-    left: 50%;
-    top: 50%;
-    margin-top: -350px;
-    z-index: 410;
-    margin-left: -350px;
+    left: 0;
+    top: 0;
+
     background: #fff;
     transform:scale(0);
     opacity:0;
     transition: all 0.5 cubic-bezier(0.23, 1, 0.32, 1);
+
+    @media (min-width: 992px) {
+        width: 700px;
+        max-width: 700px;
+        left: 50%;
+        top: 50%;
+        margin-top: -350px;
+        z-index: 410;
+        margin-left: -350px;
+        height: 700px;
+    }
 
     @media (max-width: 768px) {
         width: 100%;
@@ -577,6 +616,15 @@ h1 {
         margin-left: -40px;
         background: $brown;
     }
+
+    &--left {
+        text-align: left;
+
+        &:before {;
+            left: 0;
+            margin-left: 0;
+        }
+    }
 }
 .services {
     padding-top: 100px;
@@ -660,13 +708,20 @@ h1 {
 }
 
 .portfolio {
-    padding: 90px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    &--pages {
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         margin-top: 90px;
-        padding: 0 8%;
+        padding-left: 0;
+        padding-right: 0;
 
         @media  (max-width: 768px) {
             flex-wrap: wrap;
@@ -775,7 +830,7 @@ h1 {
         padding: 0 17%;
         margin-bottom: 65px;
 
-        @media  (max-width: 768px) {
+        @media  (max-width: 992px) {
             font-size: 26px;
         }
     }
@@ -793,7 +848,7 @@ h1 {
     }
     bottom: 0;
     width: 100%;
-    padding: 70px 3.5% 0 7%;
+    padding: 70px 3% 0 7%;
 
     @media (max-width: 992px) {
         padding-bottom: 50px;
@@ -826,7 +881,16 @@ h1 {
         }
     }
     &__item {
-        padding-left: 50px;
+
+        @media (min-width: 992px) {
+            padding-left: 20px;
+        }
+        @media (min-width: 1024px) {
+            padding-left: 20px;
+        }
+        @media (min-width: 1440px) {
+            padding-left: 50px;
+        }
 
         a {
 
@@ -847,6 +911,8 @@ h1 {
             padding-left: 0;
             margin-bottom: 15px;
         }
+
+
     }
 
 }
@@ -856,9 +922,17 @@ h1 {
     &__list {
         display: flex;
         justify-content: space-evenly;
+
+        @media (max-width: 992px) {
+            justify-content: center;
+        }
+
     }
     &__item {
-
+        @media (max-width: 992px) {
+            margin-right: 25px;
+            margin-left: 25px;
+        }
     }
     &__href {
         cursor: pointer;
@@ -1041,7 +1115,6 @@ h1 {
     padding-top: 130px;
 
     &__title {
-        font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
         font-size: 36px;
@@ -1061,9 +1134,22 @@ h1 {
         }
     }
     &__txtblock {
-        padding-left: 9%;
         padding-top: 100px;
-        padding-right: 70px;
+        //padding-right: 70px;
+        padding-bottom: 150px;
+
+        @media (min-width: 1024px) {
+            padding-right: 70px;
+        }
+        @media (max-width: 568px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @media (max-width: 1024px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
     }
     &__p {
         font-style: normal;
@@ -1077,17 +1163,25 @@ h1 {
     &__list-item {
         margin-bottom: 15px;
         font-size: 18px;
+        position: relative;
+        list-style-type: disc;
+    }
+    &__img {
+        background: url("../img/about1.png") 0 0 no-repeat;
+        background-size: cover;
+        width: 100%;
 
-        &:before {
-            content: '';
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #fff;
 
+        @media (max-width: 992px) {
+            min-height: 600px;
+        }
+
+        @media (max-width: 1023px) {
+            min-height: 710px;
+        }
+
+        @media (min-width: 1024px) {
+            min-height: 710px;
         }
 
     }
@@ -1100,6 +1194,9 @@ h1 {
 
     &__list {
         margin-top: 50px;
+        @media (max-width: 1024px) {
+            text-align: center;
+        }
 
     }
     &__list-item {
@@ -1107,6 +1204,22 @@ h1 {
         &:first-child {
             margin-left: 0;
         }
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+    }
+    &__subtitle {
+        width: 100%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 40px;
+        margin-top: 90px;
     }
 
 }
@@ -1114,6 +1227,58 @@ h1 {
 .sertificates__list {
 
 }
+
+.page {
+    &__title {
+        @extend .title;
+
+        text-align: left;
+
+        &:before {;
+            left: 0;
+            margin-left: 0;
+        }
+    }
+    padding-top: 220px;
+
+    &__content {
+        padding-top: 63px;
+        padding-bottom: 110px;
+
+
+    }
+    &__txtblock {
+        @media  (max-width: 768px) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__txt {
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 20px;
+
+
+
+    }
+    &__img {
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .header  .button--border {
+        display: none;
+    }
+}
+
 
 
 
