@@ -28,6 +28,15 @@ address {
 }
 .container-fluid {
     padding: 0;
+    max-width: 1440px;
+    margin:  0 auto;
+
+    @media (max-width: 1199px) {
+        div[class*='col-'] {
+            padding: 0;
+        }
+    }
+
 }
 
 .container {
@@ -165,6 +174,11 @@ h1 {
     padding-top: 31px;
     z-index: 3;
 
+    .container {
+        position: relative;
+    }
+
+
     &__right {
         padding-left: 93px;
 
@@ -189,11 +203,39 @@ h1 {
         z-index: 3;
         padding-left: 0;
 
-        .menu-trigger {
-            margin-right: 8.33333%;
-            margin-top: 22px;
 
+        @media  (max-width: 1199px) {
+            padding: 35px 50px;
+            background: #fff;
+            border-bottom: 1px solid $brown;
         }
+
+        @media  (max-width: 767px) {
+            padding: 23px 10px;
+        }
+
+        .menu-trigger {
+
+            @media  (max-width: 1199px) {
+                position: absolute;
+                left: 0;
+                top: 24px;
+            }
+
+            @media  (min-width: 1200px) {
+                margin-right: 100px;
+                margin-left: 75px;
+                margin-top: 21px;
+            }
+
+            @media  (max-width: 767px) {
+                position: absolute;
+                left: 30px;
+                margin-left: 10px;
+            }
+        }
+
+
 
     }
 
@@ -213,8 +255,9 @@ h1 {
 
 @media  (max-width: 768px) {
     .button--inverse {
-        display: none;
+        //display: none;
     }
+
 }
 
 
@@ -254,6 +297,7 @@ h1 {
         padding: 0 67px;
         display: block;
         margin: 0 auto;
+        height: 80px;
 
         @media  (max-width: 768px) {
             padding: 0 40px;
@@ -269,16 +313,19 @@ h1 {
         padding: 0 67px;
         display: block;
         margin: 0 auto;
+        height: 80px;
     }
 }
 .menu-trigger {
     display: inline-block;
     width: 24px;
     height: 16px;
-    margin-left: 70px;
     cursor: pointer;
-    margin-top: 22px;
 
+
+    @media  (min-width: 1200px) {
+        margin-left: 70px;
+    }
 }
 
 @keyframes unfoldIn {
@@ -516,26 +563,42 @@ h1 {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-
-.height100vh {
-      height: 100vh;
+.container-app {
+    //overflow-y: hidden;
 }
-
 .main-slide {
-
-
+    //overflow-y: hidden;
 
     @media  (min-width: 992px) {
         height: 100vh;
     }
 
+    @media  (max-width: 768px) {
+        .logo-img {
+            padding: 0 10px;
+        }
+    }
+
+    @media  (max-width: 1199px) {
+        .logo-img {
+            display: block;
+            margin: 0 auto;
+            padding: 0 75px;
+        }
+    }
+
+
+
     &__img {
-        height: 100vh;
-        //@media  (min-width: 992px) {
-        //    height: 100vh;
-        //}
-        background: url("../img/main-slide.png") 0 0 no-repeat;
-        background-size: cover;
+        @media  (min-width: 1200px) {
+            background: url("../img/main-slide.png") 0 0 no-repeat;
+            background-size: cover;
+            height: 100vh;
+            .logo-img {
+                display: none;
+            }
+        }
+
         img {
             //object-fit: cover;
         }
@@ -545,14 +608,33 @@ h1 {
     width: 330px;
     height: 214px;
 
-    img {
+    @media  (max-width: 768px) {
+        margin-top: 150px;
+        margin-bottom: 60px;
+        width: 190px;
+        height: auto;
 
+    }
+    @media  (max-width: 1199px) {
+        margin-top: 210px;
+        margin-bottom: 75px;
+    }
+
+    img {
         display: block;
     }
 }
 
+.height100vh {
+
+    @media  (min-width: 1200px) {
+        height: 100vh;
+    }
+
+}
+
 .intro {
-    padding: 125px 0 120px 0 ;
+    padding: 125px 0 126px 0 ;
 
     &__photo {
 
@@ -561,6 +643,11 @@ h1 {
         }
     }
     &__txt {
+
+        @media  (max-width: 1199px) {
+            max-width: 460px;
+            margin: 0 auto;
+        }
 
     }
     &__imgblock {
@@ -575,25 +662,49 @@ h1 {
     &__slogan {
         position: relative;
         font-size: 22px;
-        padding-top: 55px;
+
+        @media  (max-width: 1199px) {
+            text-align: center;
+            padding-top: 55px;
+        }
+
+        @media  (min-width: 1199px) {
+            max-width: 400px;
+        }
+
         &:before {
             content: '';
             position: absolute;
-            top: 0;
+            top: -55px;
             left: -13px;
             width: 40px;
             height: 30px;
+
+            @media  (max-width: 1199px) {
+                left: 50%;
+                top: 0;
+                margin-left: -20px;
+            }
+
             background: url("../img/quotes.svg") 0 0 no-repeat;
         }
     }
     &__author {
         font-size: 22px;
         color: $brown;
-        padding-top: 55px;
+        padding-top: 52px;
         padding-bottom: 12px;
+        @media  (max-width: 1199px) {
+            text-align: center;
+        }
     }
     &__description {
         font-size: 14px;
+        line-height: 1.6;
+
+        @media  (max-width: 1199px) {
+            text-align: center;
+        }
     }
 }
 
@@ -629,13 +740,13 @@ h1 {
     }
 }
 .services {
-    padding-top: 100px;
+    padding-top: 105px;
     padding-bottom: 125px;
     background: $light-grey;
 
     &__list {
         margin-top: 80px;
-        margin-bottom: 110px;
+        margin-bottom: 105px;
         padding: 0 5%;
 
         @media  (min-width: 1441px) {
@@ -650,19 +761,23 @@ h1 {
     display: flex;
     margin-bottom: 21px;
 
-    @media  (max-width: 992px) {
+    @media  (max-width: 1199px) {
         flex-wrap: wrap;
         height: auto;
     }
+    @media  (max-width: 767px) {
+        padding-bottom: 30px;
+    }
+
     &__col-left {
         width: 50%;
-        padding-top: 44px;
-        padding-left: 55px;
+        padding-top: 48px;
+        padding-left: 56px;
 
         @media (min-width: 992px) and (max-width: 1339px) {
             padding-left: 25px;
         }
-        @media  (max-width: 992px) {
+        @media  (max-width: 767px) {
             width: 100%;
         }
 
@@ -676,15 +791,19 @@ h1 {
     }
     &__col-right {
         width: 50%;
-        @media  (max-width: 992px) {
-            width: 100%;
-            height: 320px;
+        @media  (max-width: 767px) {
+            display: none;
+        }
+        @media  (max-width: 1200px) {
+            width: 50%;
+            height: 340px;
         }
     }
     &__title {
         font-size: 30px;
         font-weight: normal;
         color: $brown;
+        padding-left: 12px;
         font-family: $fontDefault;
     }
     &__list {
@@ -693,7 +812,7 @@ h1 {
     &__item {
         margin-bottom: 13px;
         position: relative;
-        padding-left: 20px;
+        padding-left: 15px;
 
         &:before {
             content: '';
@@ -711,7 +830,7 @@ h1 {
 
 .portfolio {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 
     &--pages {
         margin-top: 0;
@@ -725,7 +844,7 @@ h1 {
         padding-left: 0;
         padding-right: 0;
 
-        @media  (max-width: 768px) {
+        @media  (max-width: 767px) {
             flex-wrap: wrap;
         }
 
@@ -734,12 +853,12 @@ h1 {
         width: 25%;
         padding: 1px;
 
-        @media  (max-width: 768px) {
+        @media  (max-width: 767px) {
             width: 100%;
         }
 
-        @media  (min-width: 769px) and (max-width: 1180px)  {
-            width: 50%;
+        @media  (min-width: 768px) and (max-width: 1180px)  {
+            width: 33%;
         }
     }
 }
@@ -750,7 +869,7 @@ h1 {
     &__list {
         width: 910px;
         display: block;
-        margin: 90px auto;
+        margin: 95px auto 130px auto;
 
         @media (min-width: 320px) and (max-width: 767px) {
             width: 100%;
@@ -777,7 +896,7 @@ h1 {
     }
     &__name {
         text-align: center;
-        padding-top: 15px;
+        padding-top: 18px;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -787,7 +906,7 @@ h1 {
         font-style: normal;
         font-weight: normal;
         font-size: 22px;
-        padding: 45px 135px 0 135px;
+        padding: 47px 135px 0 135px;
 
         @media  (max-width: 768px) {
             padding: 45px 25px 0 25px;
@@ -804,7 +923,7 @@ h1 {
 
 .promo {
 
-    margin-bottom: 140px;
+    margin-bottom: 150px;
 
     &__container {
         width: 69%;
@@ -815,7 +934,8 @@ h1 {
         max-width: 1000px;
 
         @media  (max-width: 768px) {
-            width: 90%;
+            width: 100%;
+
         }
 
     }
@@ -841,45 +961,70 @@ h1 {
 
 .footer {
     border-top: 1px solid $brown;
-    height: 200px;
 
-    position: absolute;
 
     @media (max-width: 992px) {
         position: static;
     }
     bottom: 0;
     width: 100%;
-    padding: 70px 3% 0 7%;
-
-    @media (max-width: 992px) {
-        padding-bottom: 50px;
+    @media (max-width: 1199px) {
+        padding: 45px 0;
+    }
+    @media (min-width: 1200px) {
+        padding: 70px 0 0 0;
+        height: 200px;
+        position: absolute;
     }
 
     &__logo {
         width: 100%;
         display: block;
-        @media (max-width: 992px) {
+        @media (min-width: 1200px) {
+            padding: 0 0 0 100px;
+        }
+        @media (max-width: 1199px) {
             text-align: center;
             img {
                 position: relative;
                 left: -30px;
+                margin-bottom: 60px;
             }
         }
 
     }
 
 }
+.footer-desktop-logo {
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+    }
+}
+
+.footer-mobile-logo {
+    display: none;
+    @media (max-width: 1199px) {
+        display: block;
+    }
+}
 
 .navigation-footer {
+
+    @media (min-width: 1200px) {
+        padding: 0 0 0 20px;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 0 0 0 85px;
+    }
+
     &__list {
         display: flex;
-
-
-        @media (max-width: 992px) {
+        @media (max-width: 1199px) {
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
     }
     &__item {
@@ -887,11 +1032,13 @@ h1 {
         @media (min-width: 992px) {
             padding-left: 20px;
         }
-        @media (min-width: 1024px) {
-            padding-left: 20px;
+
+        @media (min-width: 1200px) {
+            padding-left: 40px;
         }
+
         @media (min-width: 1440px) {
-            padding-left: 50px;
+            padding-left: 56px;
         }
 
         a {
@@ -906,17 +1053,28 @@ h1 {
                 text-decoration: underline;
             }
         }
-
-        @media (max-width: 992px) {
-            width: 100%;
+        @media (max-width: 1199px) {
             text-align: center;
-            padding-left: 0;
+            padding-left: 45px;
             margin-bottom: 15px;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 20px;
+            padding-left: 0;
         }
 
 
     }
 
+}
+
+.navigation-footer__list .navigation-footer__item:first-child {
+    padding-left: 0;
 }
 
 .social {
@@ -931,9 +1089,9 @@ h1 {
 
     }
     &__item {
-        @media (max-width: 992px) {
-            margin-right: 25px;
-            margin-left: 25px;
+        @media (max-width: 1199px) {
+            margin-right: 26px;
+            margin-left: 26px;
         }
     }
     &__href {
@@ -941,13 +1099,13 @@ h1 {
     }
 
     &--aside {
-        margin-top: 50px;
+        margin-top: 60px;
         .social__list {
             justify-content: center;
         }
         .social__href {
-            margin-right: 25px;
-            margin-left: 25px;
+            margin-right: 27px;
+            margin-left: 27px;
         }
 
 
@@ -996,7 +1154,7 @@ h1 {
         width: 100%;
         display: inline-block;
         text-align: center;
-        margin-bottom: 34px;
+        margin-bottom: 29px;
         cursor: pointer;
 
         @media (min-width: 768px) and (max-width: 992px) {
@@ -1131,7 +1289,7 @@ h1 {
             width: 100px;
             height: 1px;
             left: 0;
-            top: 80px;
+            top: 90px;
             background: #fff;
         }
     }
@@ -1195,20 +1353,24 @@ h1 {
     padding-bottom: 125px;
 
     &__list {
-        margin-top: 50px;
+        margin-top: 90px;
         @media (max-width: 1024px) {
             text-align: center;
         }
 
     }
     &__list-item {
-        margin-left: 10px;
+        margin-left: 40px;
         &:first-child {
             margin-left: 0;
         }
 
         @media (max-width: 992px) {
             text-align: center;
+        }
+        img {
+
+            box-shadow: 0px 5px 40px rgba(170, 176, 207, 0.2);
         }
 
     }
@@ -1233,6 +1395,7 @@ h1 {
 .page {
     &__title {
         @extend .title;
+        padding-bottom: 37px;
 
         text-align: left;
 

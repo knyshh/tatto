@@ -123,6 +123,7 @@
     top: 50%;
 
     display: block;
+    margin-top: 10px;
 
     width: 16px;
     height: 16px;
@@ -231,13 +232,11 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -45px;
-
+    bottom: -15px;
     display: block;
 
     width: 100%;
     padding: 0;
-    margin: 0;
 
     list-style: none;
 
@@ -251,7 +250,7 @@
 
     width: 10px;
     height: 10px;
-    margin: 0 5px;
+    margin: 0 8px;
     padding: 0;
 
     cursor: pointer;
